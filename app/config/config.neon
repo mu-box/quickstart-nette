@@ -11,5 +11,10 @@ session:
 	expiration: 14 days
 
 
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension
+	server: Sunfox\PhpServer\DI\PhpServerExtension
+
+
 services:
 	router: App\RouterFactory::createRouter
