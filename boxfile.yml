@@ -1,0 +1,62 @@
+run.config:
+  # install php and associated runtimes
+  engine: php
+
+  # php engine configuration (php version, extensions, etc)
+  engine.config:
+
+    # sets the php version to 7.0
+    runtime: php-7.0
+
+    # use nginx
+    webserver: nginx
+
+    # public directory
+    document_root: www
+
+    # index
+    nginx_default_gateway: index.php
+
+    # enables php extensions
+    extensions:
+      - bcmath
+      - ctype
+      - dom
+      - fileinfo
+      - gd
+      - json
+      - iconv
+      - intl
+      - mbstring
+      - pdo
+      - pdo_mysql
+      - pdo_sqlite
+      - session
+      - simplexml
+      - tokenizer
+      - xml
+      - zlib
+
+# add a MySQL database
+data.db:
+  image: nanobox/mysql
+
+#
+web.main:
+  start:
+    nginx: start-nginx
+    fpm: start-php
+
+  # add writable dirs to your web component
+  writable_dirs:
+    - log
+    - temp
+
+  # the path to a logfile you want streamed to the nanobox dashboard
+  log_watch:
+    nginx[access]: /data/var/log/nginx/access.log
+    nginx[error]: /data/var/log/nginx/error.log
+    php[error]: /data/var/log/php/php_error.log
+    php[fpm]: /data/var/log/php/php_fpm.log
+    nette[error]: /app/log/error.log
+    nette[exception]: /app/log/exception.log

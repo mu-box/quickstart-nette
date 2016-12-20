@@ -1,44 +1,58 @@
-Nette Web Project
-=================
+# Nette from scratch
 
-This is a simple, skeleton application using the [Nette](https://nette.org). This is meant to
-be used as a starting point for your new projects.
+Run a Nette app locally, install nothing besides nanobox.
 
-[Nette](https://nette.org) is a popular tool for PHP web development.
-It is designed to be the most usable and friendliest as possible. It focuses
-on security and performance and is definitely one of the safest PHP frameworks.
+<a href="https://nanobox.io/download"><img src="https://guides.nanobox.io/assets/quickstart-icons/download.png" /></a>
 
 
-Requirements
-------------
+## Clone the repo
 
-PHP 5.6 or higher.
+```bash
+# clone the code
+git clone https://github.com/nanobox-quickstarts/nanobox-nette.git
 
+# cd into the nette app
+cd nanobox-nette
+```
 
-Installation
-------------
+## Run the app
 
-The best way to install Web Project is using Composer. If you don't have Composer yet,
-download it following [the instructions](https://doc.nette.org/composer). Then use command:
+```bash
+# Optinally enable nette debug mode
+nanobox evar add local NETTE_DEVEL=1
 
-	composer create-project nette/web-project path/to/install
-	cd path/to/install
+# Run nette using nette-php-server, with Nanobox
+nanobox run php bin/console server:run 0.0.0.0
+```
 
+## Check it out
 
-Make directories `temp/` and `log/` writable.
+```bash
+# Add a convenient way to access your app from the browser
+nanobox dns add local nette.dev
+```
 
+Visit your app at <a href="http://nette.dev:8000" target="\_blank">nette.dev:8000</a>
 
-Web Server Setup
-----------------
+## Explore
 
-The simplest way to get started is to start the built-in PHP server in the root directory of your project:
+With Nanobox, you don't have to have anything installed on your machine to run your app:
 
-	php -S localhost:8000 -t www
+```bash
+# drop into a Nanobox console
+nanobox run
 
-Then visit `http://localhost:8000` in your browser to see the welcome page.
+# where nette is installed,
+php -v
 
-For Apache or Nginx, setup a virtual host to point to the `www/` directory of the project and you
-should be ready to go.
+# your packages are available,
+composer show
 
-**It is CRITICAL that whole `app/`, `log/` and `temp/` directories are not accessible directly
-via a web browser. See [security warning](https://nette.org/security-warning).**
+# and your code is mounted
+ls
+```
+
+## Now What?
+For more details about running nette apps with nanobox visit [guides.nanobox.io/php/nette/](https://guides.nanobox.io/php/nette/)
+
+<a href="https://nanobox.io"><img src="https://guides.nanobox.io/assets/quickstart-icons/footer.png" /></a>

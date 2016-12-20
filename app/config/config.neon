@@ -18,3 +18,7 @@ extensions:
 
 services:
 	router: App\RouterFactory::createRouter
+
+
+includes:
+	- database.php
