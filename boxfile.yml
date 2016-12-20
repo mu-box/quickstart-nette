@@ -28,6 +28,7 @@ run.config:
       - iconv
       - intl
       - mbstring
+      - memcache
       - pdo
       - pdo_mysql
       - pdo_sqlite
