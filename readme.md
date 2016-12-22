@@ -1,3 +1,5 @@
+![Nette from Scratch](https://guides.nanobox.io/assets/quickstart-icons/nette.png)
+
 # Nette from scratch
 
 Run a Nette app locally, install nothing besides nanobox.
