@@ -13,7 +13,7 @@ session:
 
 extensions:
 	console: Kdyby\Console\DI\ConsoleExtension
-	server: Sunfox\PhpServer\DI\PhpServerExtension
+	server: Kdyby\NettePhpServer\DI\PhpServerExtension
 
 
 services:
