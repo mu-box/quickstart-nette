@@ -8,7 +8,7 @@ if (getenv('NETTE_DEVEL') === '1') {
     $configurator->setDebugMode(TRUE);
 }
 
-$configurator->enableDebugger(__DIR__ . '/../log');
+$configurator->enableTracy(__DIR__ . '/../log');
 
 $configurator->setTimeZone('Europe/Prague');
 $configurator->setTempDirectory(__DIR__ . '/../temp');
