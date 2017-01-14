@@ -23,16 +23,14 @@ cd nanobox-nette
 # Optinally enable nette debug mode
 nanobox evar add local NETTE_DEVEL=1
 
+# Add a convenient way to access your app from the browser
+nanobox dns add local nette.dev
+
 # Run nette using nette-php-server, with Nanobox
 nanobox run php bin/console server:run 0.0.0.0
 ```
 
 ## Check it out
-
-```bash
-# Add a convenient way to access your app from the browser
-nanobox dns add local nette.dev
-```
 
 Visit your app at <a href="http://nette.dev:8000" target="\_blank">nette.dev:8000</a>
 
