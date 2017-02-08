@@ -27,7 +27,7 @@ nanobox evar add local NETTE_DEVEL=1
 nanobox dns add local nette.dev
 
 # Run nette using nette-php-server, with Nanobox
-nanobox run php bin/console server:run 0.0.0.0
+nanobox run php -S 0.0.0.0:8000 -t www
 ```
 
 ## Check it out
