@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Presenters;
 
 use Nette;
@@ -21,7 +23,7 @@ class ErrorPresenter implements Nette\Application\IPresenter
 	}
 
 
-	public function run(Nette\Application\Request $request)
+	public function run(Nette\Application\Request $request): Nette\Application\IResponse
 	{
 		$exception = $request->getParameter('exception');
 
